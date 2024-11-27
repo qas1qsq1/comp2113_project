@@ -1,0 +1,11 @@
+#ifndef FIGHT_H
+#define FIGHT_H
+#include "player.h"
+
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+void Fight(Player &player);
+
+#endif
