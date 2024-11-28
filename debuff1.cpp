@@ -12,7 +12,7 @@ void applyDebuff(Player &player, int debuffType, RandomEvent &randomEvent) {
             std::cout << "You feel weakened. Current health reduced by " << amount << "%." << std::endl;
             if (player.PlayerLife <=0){
                 player.failed = true;
-                std::cout <<"You are dead. Game over!" << endl;
+                std::cout <<"You are dead. Game over!" << std::endl;
             }
             break;
         case 2:
@@ -22,7 +22,7 @@ void applyDebuff(Player &player, int debuffType, RandomEvent &randomEvent) {
             break;
         case 3:
             amount = randomEvent.generateRandom(1, 10);
-            player.attack -= player.attack * (amount / 100.0);
+            player.PlayerAttack -= player.PlayerAttack * (amount / 100.0);
             std::cout << "Your attack power is reduced by " << amount << "%." << std::endl;
             break;
         case 4:
@@ -32,8 +32,8 @@ void applyDebuff(Player &player, int debuffType, RandomEvent &randomEvent) {
             std::cout << "Your max health is reduced by " << amount << "%, and health increased by 10%." << std::endl;
             break;
     }
-    if(player.health > player.PlayerMaxLife) {
-        player.health = player.PlayerMaxLife;
+    if(player.PlayerLife > player.PlayerMaxLife) {
+        player.PlayerLife = player.PlayerMaxLife;
     }
 }
 
@@ -74,6 +74,11 @@ void debuff(Player &player, RandomEvent &randomEvent) {
 //                     randomEvent.generateRandom(80, 100),
 //                     randomEvent.generateRandom(80, 100),
 //                     0};
+
+//    debuff(player, randomEvent);
+
+//    return 0;
+//}
 
 //    debuff(player, randomEvent);
 
