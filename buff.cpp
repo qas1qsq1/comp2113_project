@@ -3,6 +3,7 @@
 #include <ctime>
 #include "player1.h"
 #include "randomevent.h"
+#include "buff.h"
 
 using namespace std;
 
