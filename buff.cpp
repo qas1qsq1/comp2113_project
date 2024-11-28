@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include "player.h"
+#include "player1.h"
 
 using namespace std;
 
