@@ -37,6 +37,8 @@ int main(){
         all_players[i].failed = false;
     }
 
+    RandomEvent randomEvent;
+
     // 然后每一个玩家开始闯关；
 
     for (int i =0; i<player_num; i++){
@@ -48,9 +50,9 @@ int main(){
                 cout << "Now it is day " << day << " !";
                 this_thread::sleep_for(std::chrono::seconds(2));
 
-                int path = generateRandom(1, 100);
+                int path = randomEvent.generateRandom(1, 100);
                 if (path <= 15){
-                    RandomEvent randomEvent;
+                    
                     debuff(all_players[i], randomEvent);
                     cout << "Oops! Something bad happened!";
                     this_thread::sleep_for(std::chrono::seconds(1));
