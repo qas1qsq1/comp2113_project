@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include <ctime>
 #include "fight.h"
+#include "player1.h"
 
 void Fight(Player &player) {
 
