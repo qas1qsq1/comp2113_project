@@ -1,7 +1,7 @@
 //player.h
 #ifndef PLAYER_H
 #define PLAYER_H
-struct Player {
+struct Player1 {
     int health;      
     int maxHealth;   
     int attack;      
