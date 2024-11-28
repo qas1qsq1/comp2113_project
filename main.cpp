@@ -29,7 +29,7 @@ int main(){
     cin >> max_life_default;
 
     // 设置每个玩家的属性
-    for (int i=0； i< player_num; i++){
+    for (int i=0; i< player_num; i++){
         all_players[i].score = 0;
         all_players[i].PlayerAttack = attack_default;
         all_players[i].PlayerLife = life_default;
