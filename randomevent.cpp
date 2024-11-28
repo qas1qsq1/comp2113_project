@@ -6,9 +6,9 @@ int main() {
     int randomNumber = randomEvent.generateRandom(1, 10); // 调用 generateRandom 函数
     //std::cout << "Random number: " << randomNumber << std::endl;
     return 0;
-}
+}*/
 
-#include "randomevent.h"*/
+#include "randomevent.h"
 
 RandomEvent::RandomEvent() {
     srand(static_cast<unsigned int>(time(0))); // 初始化随机数生成器
