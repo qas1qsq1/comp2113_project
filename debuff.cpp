@@ -1,27 +1,28 @@
 #include <iostream>
-
+#include "debuff.h"
+#include "randomevent.h"
 
 
 void applyDebuff(Player &player, int debuffType, RandomEvent &randomEvent) {
     int amount;
     switch(debuffType) {
         case 1:
-            amount = randomEvent.generateRandom(5, 15);
+            amount = randomEvent.generateRandom(1, 10);
             player.health -= player.health * (amount / 100.0);
             std::cout << "You feel weakened. Current health reduced by " << amount << "%." << std::endl;
             break;
         case 2:
-            amount = randomEvent.generateRandom(5, 15);
+            amount = randomEvent.generateRandom(1, 10);
             player.maxHealth -= player.maxHealth * (amount / 100.0);
             std::cout << "You are injured. Max health reduced by " << amount << "%." << std::endl;
             break;
         case 3:
-            amount = randomEvent.generateRandom(5, 12);
+            amount = randomEvent.generateRandom(1, 10);
             player.attack -= player.attack * (amount / 100.0);
             std::cout << "Your attack power is reduced by " << amount << "%." << std::endl;
             break;
         case 4:
-            amount = randomEvent.generateRandom(15, 25);
+            amount = randomEvent.generateRandom(1, 10);
             player.maxHealth -= player.maxHealth * (amount / 100.0);
             player.health += player.maxHealth * 0.1;
             std::cout << "Your max health is reduced by " << amount << "%, and health increased by 10%." << std::endl;
