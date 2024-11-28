@@ -1,6 +1,6 @@
-#ifndef FIGHT_H
-#define FIGHT_H
-#include "player.h"
+#ifndef WINNER_H
+#define WINNER_H
+#include "player1.h"
 
 #include <iostream>
 #include <cstdlib>
