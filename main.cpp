@@ -1,8 +1,8 @@
 #include fight.h
 #include randomevent.h
 #include buff.h
-#include debuff.h
-#include player.h
+#include debuff1.h
+
 #include player1.h
 #include winner.h
 #include <thread>
