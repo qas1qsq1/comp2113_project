@@ -1,25 +1,16 @@
-# Makefile
-
-CXX = g++
-CXXFLAGS = -Wall -g
-TARGET = game
-
-SOURCES = main.cpp \
-           buff.cpp \
-           debuff1.cpp \
-           fight.cpp \
-           randomevent.cpp \
-           winner.cpp
-
+CC = g++
+CFLAGS = -Wall -Wextra -g3
+SOURCES = main.cpp randomevent.cpp buff.cpp debuff1.cpp fight.cpp winner.cpp
 OBJECTS = $(SOURCES:.cpp=.o)
+TARGET = output
 
 all: $(TARGET)
 
 $(TARGET): $(OBJECTS)
-	$(CXX) $(CXXFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $(TARGET) $(OBJECTS)
 
 %.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c $<
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJECTS) $(TARGET)
