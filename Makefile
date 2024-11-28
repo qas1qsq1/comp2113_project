@@ -6,7 +6,6 @@ TARGET = game
 
 SOURCES = main.cpp \
            buff.cpp \
-           debuff.cpp \
            debuff1.cpp \
            fight.cpp \
            randomevent.cpp \
