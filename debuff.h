@@ -4,7 +4,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include "player.h"
+#include "player1.h"
 #include "randomevent.h"
 
 //class RandomEvent {
