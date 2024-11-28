@@ -4,8 +4,8 @@
 #include "randomevent.h"
 #include "fight.h"
 #include "buff.h"
-#include "debuff.h"
-#include "player.h"
+#include "debuff1.h"
+#include "player1.h"
 
 void findTopPlayer(Player* all_players, int player_num)
 
