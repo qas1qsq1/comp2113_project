@@ -3,7 +3,8 @@
 #include buff.h
 #include debuff.h
 #include player.h
-
+#include player1.h
+#include winner.h
 #include <thread>
 #include <chrono>
 #include<iostream>
