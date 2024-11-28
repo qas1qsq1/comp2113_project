@@ -2,7 +2,7 @@
 #define BUFF_H
 
 #include <iostream>
-#include "player.h"
+#include "player1.h"
 
 
 
