@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-
+#include "fight.h"
 
 void Fight(Player &player) {
 
