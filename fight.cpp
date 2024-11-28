@@ -27,7 +27,7 @@ void Fight(Player &player) {
         std::cout << "Boss life: " << BossLife << std::endl;
 
         // Player attacks first
-        BossLife -= PlayerAttack;
+        BossLife -= player.PlayerAttack;
 
         if (BossLife <= 0) {
             player.score += BossLife + BossAttack;
