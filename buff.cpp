@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include <ctime>
 #include "player1.h"
+#include "randomevent.h"
 
 using namespace std;
 
