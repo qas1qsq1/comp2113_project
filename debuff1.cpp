@@ -1,6 +1,6 @@
 #include <iostream>
 #include "randomevent.h"
-#include "player.h"
+#include "player1.h"
 
 void applyDebuff(Player &player, int debuffType, RandomEvent &randomEvent) {
     int amount;
