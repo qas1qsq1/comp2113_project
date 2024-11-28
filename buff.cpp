@@ -28,12 +28,12 @@ void applyBuff(Player &player, int buffType, RandomEvent &randomEvent) {
     int amount;
     switch(buffType) {
         case 1:
-            amount = randomEvent.generateRandom(5, 15);
+            amount = randomEvent.generateRandom(1, 10);
             player.PlayerAttack += player.PlayerAttack * (amount / 100.0);
             cout << "Your attack power increased by " << amount << "%." << endl;
             break;
         case 2:
-            amount = randomEvent.generateRandom(10, 20);
+            amount = randomEvent.generateRandom(1, 10);
             if (player.PlayerLife < player.PlayerMaxLife) {
                 player.PlayerLife += amount;
                 if (player.PlayerLife > player.PlayerMaxLife) {
@@ -45,7 +45,7 @@ void applyBuff(Player &player, int buffType, RandomEvent &randomEvent) {
             }
             break;
         case 3:
-            amount = randomEvent.generateRandom(10, 20);
+            amount = randomEvent.generateRandom(1, 10);
             player.PlayerMaxLife += amount;
             player.PlayerLife += amount; // Increase current life as well
             cout << "Your max life increased by " << amount << " points, and current life adjusted." << endl;
