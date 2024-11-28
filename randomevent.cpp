@@ -1,4 +1,4 @@
-#include "randomevent.h"
+/*#include "randomevent.h"
 #include <iostream>
 
 int main() {
@@ -8,3 +8,12 @@ int main() {
     return 0;
 }
 
+#include "randomevent.h"*/
+
+RandomEvent::RandomEvent() {
+    srand(static_cast<unsigned int>(time(0))); // 初始化随机数生成器
+}
+
+int RandomEvent::generateRandom(int min, int max) {
+    return rand() % (max - min + 1) + min; // 生成范围在 min 和 max 之间的随机数
+}
