@@ -9,7 +9,7 @@ void findTopPlayer(Player* all_players, int player_num) {
     int topScoreCount = 0; // 计数最高分玩家的数量
 
     // 遍历所有玩家，检查是否全部失败，并找出得分最高的玩家
-    for (int i = 0; i < player_num; i++) {
+    for (int i = 1; i < 1+player_num; i++) {
         if (!all_players[i].failed) {
             allFailed = false;  // 发现至少有一个玩家未失败
             all_players[i].score = all_players[i].PlayerAttack + all_players[i].PlayerLife + all_players[i].PlayerMaxLife; // 计算该玩家的得分
