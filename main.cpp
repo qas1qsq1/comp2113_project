@@ -42,8 +42,8 @@ int main(){
     // 然后每一个玩家开始闯关；
 
     for (int i =0; i<player_num; i++){
-        for (int day = 0; day < 30; day ++){
-            if (day ==0){
+        for (int day =1; day < 31; day ++){
+            if (day ==1){
                 cout << "Now it's the turn of player " << i << "! Get ready for your journey!" << endl;
             }
             if (not all_players[i].failed){
