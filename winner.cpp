@@ -16,7 +16,7 @@ void findTopPlayer(Player* all_players, int player_num) {
             
             if (all_players[i].score > topScore) {
                 topScore = all_players[i].score;
-                topPlayerIndex = i+1;  // 记录最高分玩家的索引
+                topPlayerIndex = i;  // 记录最高分玩家的索引
                 topScoreCount = 1;   // 重置计数
             } else if (all_players[i].score == topScore) {
                 topScoreCount++;    // 如果得分相同，计数加 1
