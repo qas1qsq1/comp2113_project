@@ -1,36 +1,36 @@
-# 1.  Identification of the Team Members (Sort by initials)
-    Qiu Hanchen(Leader) - write the winner function and main function; introduce the game and the input in the video
-    CAI Yiling(member) - write the randomevent function; debug and compile all codes and write readme.md file; record the video clips of the final video
-    Fang Kaiwen(member) - write the buff function; edit and create the final video
-    Yan Jiaying(member) - write the debuff function; introduce the buff and debuff function in the video
-    Yang Ruofan(member) - write the fight function; introduce the fight function in the video
-# 2.  Description of Application
-    Our games provide an interesting adventure for several players. Each player will experience a 30-day trip, where each day they will encounter a random event, including buff, debuff, and fighting monsters. Players’ information is stored using a struct called Player, with five properties: attack, life, max life, score, and whether the player is still alive. In the end, the player with the highest score becomes the winner. A “Draw” will be shown if several living players share the same final score. If all players die, the program will end in advance.
-    
-    Players’ information is stored in a dynamic array. Then, for each player, a for loop is used to go through the journey. Every day, a random number is generated to decide whether buff, debuff, or fighting will happen. These three blocks are developed as separate functions. For buff and debuff, they also carry a second round random number generator to determine the exact event.
-# 3.  Implemented Features
-   **Player Structure**: Implemented a `Player` struct that encapsulates essential attributes such as attack, life, max life, score, and status (alive/dead). This structure allows for easy management of player data throughout the game.
-   
-   **Random Event Generation**: Utilized a `RandomEvent` class to generate random numbers, determining whether players encounter buffs, debuffs, or monsters. This feature enhances gameplay variability and unpredictability, making each playthrough unique. This also determines which buff or debuff the players will encounter and to what extent the buff and debuff will be executed.
-   
-   **Buff and Debuff**: Developed functions for applying buffs and debuffs that affect player attributes. Buffs can increase attack, life points, or max life points, while debuffs decrease them. Notably, there is a special debuff, where max life is reduced but a 10% increase in life is given. These functions include checks to ensure that life does not exceed maximum limits.
-   
-   **Fight System**: Implemented a combat system where players can choose to fight monsters. The fight mechanics calculate damage based on player and monster stats, and finally calculate players'. This system adds excitement and risk to the game.
-   
-   **Winner Calculation**: After all players complete their journeys, the program calculates the final scores and identifies the winner.  If multiple players share the highest score, a "Draw" is declared. However, if all players die, the program will end in advance. This feature provides closure and a competitive element to the game.
-# 4.  Library Used (All are standard libraries)
-  '<iostream>': Used for input and output operations, allowing interaction with the user through the console.
+## 1.  Identification of the Team Members (Sort by initials)
+- **Qiu Hanchen (Leader)**: Wrote the winner function and main function; introduced the game and the input in the video.
+- **CAI Yiling (Member)**: Wrote the randomevent function; debugged and compiled all codes; wrote the README.md file; recorded video clips of the final video.
+- **Fang Kaiwen (Member)**: Wrote the buff function; edited and created the final video.
+- **Yan Jiaying (Member)**: Wrote the debuff function; introduced the buff and debuff function in the video.
+- **Yang Ruofan (Member)**: Wrote the fight function; introduced the fight function in the video.
+## 2.  Description of Application
+Our game provides an interesting adventure for several players. Each player will experience a 30-day trip, where each day they will encounter a random event, including buffs, debuffs, and fighting monsters. Players’ information is stored using a struct called `Player`, with five properties: attack, life, max life, score, and whether the player is still alive. In the end, the player with the highest score becomes the winner. A “Draw” will be shown if several living players share the same final score. If all players die, the program will end in advance.
+
+Players’ information is stored in a dynamic array. For each player, a for loop is used to go through the journey. Every day, a random number is generated to decide whether a buff, debuff, or fighting will happen. These three blocks are developed as separate functions. For buff and debuff, they also carry a second round random number generator to determine the exact event.
+## 3.  Implemented Features
+- **Player Structure**: Implemented a `Player` struct that encapsulates essential attributes such as attack, life, max life, score, and status (alive/dead). This structure allows for easy management of player data throughout the game.
   
-  '<cstdlib>': Provides functions for random number generation.
+- **Random Event Generation**: Utilized a `RandomEvent` class to generate random numbers, determining whether players encounter buffs, debuffs, or monsters. This feature enhances gameplay variability and unpredictability, making each playthrough unique. It also determines which buff or debuff players will encounter and to what extent.
+
+- **Buff and Debuff**: Developed functions for applying buffs and debuffs that affect player attributes. Buffs can increase attack, life points, or max life points, while debuffs decrease them. Notably, there is a special debuff where max life is reduced, but a 10% increase in life is given. These functions include checks to ensure that life does not exceed maximum limits.
+
+- **Fight System**: Implemented a combat system where players can choose to fight monsters. The fight mechanics calculate damage based on player and monster stats, adding excitement and risk to the game.
+
+- **Winner Calculation**: After all players complete their journeys, the program calculates the final scores and identifies the winner. If multiple players share the highest score, a "Draw" is declared. However, if all players die, the program will end in advance. This feature provides closure and a competitive element to the game.
+## 4.  Library Used (All are standard libraries)
+- **`<iostream>`**: Used for input and output operations, allowing interaction with the user through the console.
   
-  '<ctime>': Used to seed the random number generator with the current time, ensuring randomness in gameplay.
+- **`<cstdlib>`**: Provides functions for random number generation.
   
-  '<thread>': Enables multi-threading support, allowing the game to pause and create delays to improve user experience during events.
+- **`<ctime>`**: Used to seed the random number generator with the current time, ensuring randomness in gameplay.
   
-  '<chrono>': Provides functionality for creating sleep durations for pauses in gameplay.
+- **`<thread>`**: Enables multi-threading support, allowing the game to pause and create delays to improve user experience during events.
   
-  '<fstream>': Used for reading player configurations from the `property.txt` file.
-# 5.  Compilation and Execution Instructions
+- **`<chrono>`**: Provides functionality for creating sleep durations for pauses in gameplay.
+  
+- **`<fstream>`**: Used for reading player configurations from the `property.txt` file.
+## 5.  Compilation and Execution Instructions
    **Clone the Repository**:
    
    git clone https://github.com/qas1qsq1/comp2113_project.git
