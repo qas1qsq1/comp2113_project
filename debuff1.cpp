@@ -3,13 +3,45 @@
 #include "player1.h"
 #include "debuff1.h"
 
+//class RandomEvent {
+//public:
+//    RandomEvent() {
+//        srand(time(nullptr));
+//    }
+
+//    int generateRandom(int min, int max) {
+//        return rand() % (max - min + 1) + min;
+//    }
+//};
+
+//struct Player {
+//    int PlayerAttack;   
+//    int PlayerLife;    
+//    int PlayerMaxLife;  
+//    int score;
+//};
+
+/*
+ * Function: applyDebuff
+ * Applies a specified debuff to a Player, modifying attributes based on the buff type.
+ *
+ * Inputs:
+ * - Player &player: The player to be buffed.
+ * - int debuffType: Type of debuff (1 for current life reduce, 2 for max life reduce, 3 for attack reduce, 4 for max life reduce and current life increase).
+ * - switch: Used to generate random values for the debuffs.
+ *
+ * Outputs:
+ * - Modifies the Player's attack power, current life, or maximum life directly.
+ * - Print messages to indicate the changes.
+ */
+
 void applyDebuff(Player &player, int debuffType, RandomEvent &randomEvent) {
     int amount;
     switch(debuffType) {
         case 1:
             amount = randomEvent.generateRandom(1, 10);
             player.PlayerLife -= player.PlayerLife * (amount / 100.0);
-            std::cout << "You feel weakened. Current health reduced by " << amount << "%." << std::endl;
+            std::cout << "You feel weakened. Current life reduced by " << amount << "%." << std::endl;
             if (player.PlayerLife <=0){
                 player.failed = true;
                 std::cout <<"You are dead. Game over!" << std::endl;
@@ -18,7 +50,7 @@ void applyDebuff(Player &player, int debuffType, RandomEvent &randomEvent) {
         case 2:
             amount = randomEvent.generateRandom(1, 10);
             player.PlayerMaxLife -= player.PlayerMaxLife * (amount / 100.0);
-            std::cout << "You are injured. Max health reduced by " << amount << "%." << std::endl;
+            std::cout << "You are injured. Max life reduced by " << amount << "%." << std::endl;
             break;
         case 3:
             amount = randomEvent.generateRandom(1, 10);
@@ -29,7 +61,7 @@ void applyDebuff(Player &player, int debuffType, RandomEvent &randomEvent) {
             amount = randomEvent.generateRandom(1, 10);
             player.PlayerMaxLife -= player.PlayerMaxLife * (amount / 100.0);
             player.PlayerLife = std::max(static_cast<int>(player.PlayerLife + player.PlayerMaxLife * 0.1), player.PlayerMaxLife);
-            std::cout << "Your max health is reduced by " << amount << "%, and health increased by 10%." << std::endl;
+            std::cout << "Your max life is reduced by " << amount << "%, and life increased by 10%." << std::endl;
             break;
     }
     if(player.PlayerLife > player.PlayerMaxLife) {
