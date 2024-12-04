@@ -21,7 +21,7 @@ Players’ information is stored in a dynamic array. For each player, a for loop
 
 - **Winner Calculation**: After all players complete their journeys, the program calculates the final scores and identifies the winner. If multiple players share the highest score, a "Draw" is declared. However, if all players die, the program will end in advance. This feature provides closure and a competitive element to the game.
 ## 4.  Library Used
-# Standard
+#### Standard
 - **`<iostream>`**: Used for input and output operations, allowing interaction with the user through the console.
   
 - **`<cstdlib>`**: Provides functions for random number generation.
