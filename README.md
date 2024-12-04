@@ -19,17 +19,17 @@
    
    **Winner Calculation**: After all players complete their journeys, the program calculates the final scores and identifies the winner.  If multiple players share the highest score, a "Draw" is declared. However, if all players die, the program will end in advance. This feature provides closure and a competitive element to the game.
 # 4.  Library Used (All are standard libraries)
-  <iostream>: Used for input and output operations, allowing interaction with the user through the console.
+  '<iostream>': Used for input and output operations, allowing interaction with the user through the console.
   
-  <cstdlib>: Provides functions for random number generation.
+  '<cstdlib>': Provides functions for random number generation.
   
-  <ctime>: Used to seed the random number generator with the current time, ensuring randomness in gameplay.
+  '<ctime>': Used to seed the random number generator with the current time, ensuring randomness in gameplay.
   
-  <thread>: Enables multi-threading support, allowing the game to pause and create delays to improve user experience during events.
+  '<thread>': Enables multi-threading support, allowing the game to pause and create delays to improve user experience during events.
   
-  <chrono>: Provides functionality for creating sleep durations for pauses in gameplay.
+  '<chrono>': Provides functionality for creating sleep durations for pauses in gameplay.
   
-  <fstream>: Used for reading player configurations from the `property.txt` file.
+  '<fstream>': Used for reading player configurations from the `property.txt` file.
 # 5.  Compilation and Execution Instructions
    **Clone the Repository**:
    
