@@ -15,13 +15,13 @@ using namespace std;
 
 int main(){
     int player_num;
-    // 决定玩家数量
+    // Determine the number of players
     cout << "How many players?" << endl;
     cin >> player_num;
     Player *all_players = new Player [player_num];
 
-    // 决定每一个玩家开始时的属性
-    // 这里选择从外部文件导入
+    // Determine the starting stats of each player
+    // Select input from an external file here这里选择从外部文件导入
 
     cout << "Reading default parameters from file 'config.txt'..." << endl;
 
@@ -58,7 +58,7 @@ int main(){
 
     RandomEvent randomEvent;
 
-    // 然后每一个玩家开始闯关；
+    // Then each player starts to finish the level
 
     for (int i =0; i<player_num; i++){
         for (int day =1; day < 31; day ++){
@@ -98,7 +98,8 @@ int main(){
                 cout << "After day " << day <<", your max life point is: " << all_players[i].PlayerMaxLife << endl;
                 cout << "After day " << day <<", your attack is: " << all_players[i].PlayerAttack << endl;
                 
-                // 处理完一天之后, 暂停2秒再继续下一天
+                // After one day of processing, pause for 2 seconds before moving on to the next day
+                
                 this_thread::sleep_for(std::chrono::seconds(2));
 
             } else {
@@ -108,11 +109,11 @@ int main(){
         }
     }
 
-    // 所有玩家闯关结束 接下来找出所有存活者，并判断分数最高的赢家
+    // After all players have completed the level, all the survivors are found and the winner with the highest score is judged
 
     findTopPlayer(all_players, player_num);
 
-    // 释放动态分配的内存
+    // Free dynamically allocated memory
     delete[] all_players;
 
     return 0;
