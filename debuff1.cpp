@@ -82,10 +82,10 @@ void debuff(Player &player, RandomEvent &randomEvent) {
         if (i == debuff1 || i == debuff2) {
             std::cout << i << ". ";
             switch(i) {
-                case 1: std::cout << "Reduce current health by a random percentage." << std::endl; break;
-                case 2: std::cout << "Reduce max health by a random percentage." << std::endl; break;
+                case 1: std::cout << "Reduce current life by a random percentage." << std::endl; break;
+                case 2: std::cout << "Reduce max life by a random percentage." << std::endl; break;
                 case 3: std::cout << "Reduce attack power by a random percentage." << std::endl; break;
-                case 4: std::cout << "Reduce max health by a random percentage and increase health by 10%." << std::endl; break;
+                case 4: std::cout << "Reduce max life by a random percentage and increase current life by 10%." << std::endl; break;
             }
         }
     }
