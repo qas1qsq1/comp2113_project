@@ -25,6 +25,20 @@ using namespace std;
 //    int score;
 //};
 
+/*
+ * Function: applyBuff
+ * Applies a specified buff to a Player, modifying attributes based on the buff type.
+ *
+ * Inputs:
+ * - Player &player: The player to be buffed.
+ * - int buffType: Type of buff (1 for attack increase, 2 for life increase, 3 for max life increase).
+ * - RandomEvent &randomEvent: Used to generate random values for the buffs.
+ *
+ * Outputs:
+ * - Modifies the Player's attack power, current life, or maximum life directly.
+ * - Prints messages to indicate the changes.
+ */
+
 void applyBuff(Player &player, int buffType, RandomEvent &randomEvent) {
     int amount;
     switch(buffType) {
@@ -53,6 +67,19 @@ void applyBuff(Player &player, int buffType, RandomEvent &randomEvent) {
             break;
     }
 }
+
+/*
+ * Function: buff
+ * Applies a random buff effect to the Player by determining a buff type and using the applyBuff function.
+ *
+ * Inputs:
+ * - Player &player: The player to receive the buff.
+ * - RandomEvent &randomEvent: Used to generate a random buff type.
+ *
+ * Outputs:
+ * - Calls applyBuff to modify the Player's attributes.
+ * - Prints the type of buff applied and the updated values for life, maximum life, and attack power.
+ */
 
 void buff(Player &player, RandomEvent &randomEvent) {
     int buffType = randomEvent.generateRandom(1, 3);
