@@ -8,6 +8,8 @@
 #include <thread>
 #include <chrono>
 #include<iostream>
+#include <iostream>
+#include <fstream>
 using namespace std;
 
 
@@ -19,29 +21,46 @@ int main(){
     Player *all_players = new Player [player_num];
 
     // 决定每一个玩家开始时的属性
-    cout << "Then please set default parameter for each player." << endl;
-    int attack_default, life_default, max_life_default;
-    cout << "Default Attack is ? This should at least be 100." << endl;
-    cin >> attack_default;
-    cout << "Starting life point is ? This should at least be 100." << endl;
-    cin >> life_default;
-    cout << "Starting maximum life point is ? This should at least be 100." << endl;
-    cin >> max_life_default;
+    // 这里选择从外部文件导入
 
-    // 设置每个玩家的属性
-    for (int i=1; i< 1+ player_num; i++){
-        all_players[i].score = 0;
-        all_players[i].PlayerAttack = attack_default;
-        all_players[i].PlayerLife = life_default;
-        all_players[i].PlayerMaxLife = max_life_default;
-        all_players[i].failed = false;
+    cout << "Reading default parameters from file 'config.txt'..." << endl;
+
+    int attack_default, life_default, max_life_default;
+    ifstream config_file("property.txt");
+    if (config_file.is_open()) {
+        config_file >> attack_default >> life_default >> max_life_default;
+
+        if (attack_default < 100 || life_default < 100 || max_life_default < 100) {
+            cerr << "Error: Default values should be at least 100. Please check 'property.txt'." << endl;
+            delete[] all_players;
+            return 1;
+        }
+
+        cout << "Default Attack: " << attack_default << endl;
+        cout << "Starting Life: " << life_default << endl;
+        cout << "Starting Maximum Life: " << max_life_default << endl;
+
+        for (int i = 0; i < player_num; i++) {
+            all_players[i].PlayerAttack = attack_default;
+            all_players[i].PlayerLife = life_default;
+            all_players[i].PlayerMaxLife = max_life_default;
+            all_players[i].score = 0;
+            all_players[i].failed = false;
+        }
+
+        config_file.close();
+    } else {
+        cerr << "Error: Unable to open 'property.txt'. Make sure the file exists." << endl;
+        delete[] all_players;
+        return 1;
     }
+
 
     RandomEvent randomEvent;
 
     // 然后每一个玩家开始闯关；
 
-    for (int i = 1; i< 1 + player_num; i++){
+    for (int i =0; i<player_num; i++){
         for (int day =1; day < 31; day ++){
             if (day ==1){
                 cout << "Now it's the turn of player " << i << "! Get ready for your journey!" << endl;
