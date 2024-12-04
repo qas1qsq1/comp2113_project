@@ -1,6 +1,7 @@
 //player1.h
 #ifndef PLAYER1_H
 #define PLAYER1_H
+// struct Player
 struct Player {
     int PlayerAttack;
     int PlayerLife;
