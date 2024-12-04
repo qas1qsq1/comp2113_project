@@ -21,7 +21,7 @@ int main(){
     Player *all_players = new Player [player_num];
 
     // Determine the starting stats of each player
-    // Select input from an external file here这里选择从外部文件导入
+    // Select input from an external file here
 
     cout << "Reading default parameters from file 'config.txt'..." << endl;
 
