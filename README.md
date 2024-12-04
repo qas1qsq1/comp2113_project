@@ -23,6 +23,8 @@ Players’ information is stored in a dynamic array. For each player, a for loop
 ## 4.  Library Used
 #### Standard
 - **`<iostream>`**: Used for input and output operations, allowing interaction with the user through the console.
+
+#### Non-standard
   
 - **`<cstdlib>`**: Provides functions for random number generation.
   
