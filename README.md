@@ -13,12 +13,15 @@ Players’ information is stored in a dynamic array. For each player, a for loop
   
 - **Random Event Generation**: Utilized a `RandomEvent` class to generate random numbers, determining whether players encounter buffs, debuffs, or monsters. This feature enhances gameplay variability and unpredictability, making each playthrough unique. It also determines which buff or debuff players will encounter and to what extent.
 
+- **Main Function**: Stored players’ information in a dynamic array and utilized a for loop to navigate through the journey. It also used `<fstream>` for reading player configurations from the `property.txt` file, allowing for customizable player attributes at the start of the game.
+
 - **Buff and Debuff**: Developed functions for applying buffs and debuffs that affect player attributes. Buffs can increase attack, life points, or max life points, while debuffs decrease them. Notably, there is a special debuff where max life is reduced, but a 10% increase in life is given. These functions include checks to ensure that life does not exceed maximum limits.
 
 - **Fight System**: Implemented a combat system where players can choose to fight monsters. The fight mechanics calculate damage based on player and monster stats, adding excitement and risk to the game.
 
 - **Winner Calculation**: After all players complete their journeys, the program calculates the final scores and identifies the winner. If multiple players share the highest score, a "Draw" is declared. However, if all players die, the program will end in advance. This feature provides closure and a competitive element to the game.
-## 4.  Library Used (All are standard libraries)
+## 4.  Library Used
+# Standard
 - **`<iostream>`**: Used for input and output operations, allowing interaction with the user through the console.
   
 - **`<cstdlib>`**: Provides functions for random number generation.
