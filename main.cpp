@@ -40,7 +40,7 @@ int main(){
         cout << "Starting Life: " << life_default << endl;
         cout << "Starting Maximum Life: " << max_life_default << endl;
 
-        for (int i = 0; i < player_num; i++) {
+        for (int i = 1; i < 1 + player_num; i++) {
             all_players[i].PlayerAttack = attack_default;
             all_players[i].PlayerLife = life_default;
             all_players[i].PlayerMaxLife = max_life_default;
@@ -60,7 +60,7 @@ int main(){
 
     // Then each player starts to finish the level
 
-    for (int i =0; i<player_num; i++){
+    for (int i =1 ; i<1 +player_num; i++){
         for (int day =1; day < 31; day ++){
             if (day ==1){
                 cout << "Now it's the turn of player " << i << "! Get ready for your journey!" << endl;
