@@ -18,7 +18,7 @@ int main(){
     // Determine the number of players
     cout << "How many players?" << endl;
     cin >> player_num;
-    Player *all_players = new Player [player_num];
+    Player *all_players = new Player [player_num +1];
 
     // Determine the starting stats of each player
     // Select input from an external file here
