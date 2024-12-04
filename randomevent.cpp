@@ -2,8 +2,8 @@
 #include <iostream>
 
 int main() {
-    RandomEvent randomEvent; // 创建 RandomEvent 类的对象
-    int randomNumber = randomEvent.generateRandom(1, 10); // 调用 generateRandom 函数
+    RandomEvent randomEvent; // Create an object of the RandomEvent class
+    int randomNumber = randomEvent.generateRandom(1, 10); // Call the generateRandom function
     //std::cout << "Random number: " << randomNumber << std::endl;
     return 0;
 }*/
@@ -11,9 +11,9 @@ int main() {
 #include "randomevent.h"
 
 RandomEvent::RandomEvent() {
-    srand(static_cast<unsigned int>(time(0))); // 初始化
+    srand(static_cast<unsigned int>(time(0))); // Initialization
 }
 
 int RandomEvent::generateRandom(int min, int max) {
-    return rand() % (max - min + 1) + min; 
+    return rand() % (max - min + 1) + min; // Randomly generate the number between the given maximum and minimum number
 }
