@@ -1,6 +1,6 @@
 ## 1.  Identification of the Team Members (Sort by initials)
 - **Qiu Hanchen (Leader)**: Wrote the winner function，main function；determined program overall structuer & data strucutre; introduced the game and the input in the video.
-- **CAI Yiling (Member)**: Wrote the randomevent function; debugged and compiled all codes; wrote the README.md file; recorded video clips of the final video.
+- **CAI Yiling (Member)**: Wrote the randomevent function; wrote bonus part in the fight function; debugged and compiled all codes; wrote the README.md file; recorded video clips of the final video.
 - **Fang Kaiwen (Member)**: Wrote the buff function; edited and created the final video.
 - **Yan Jiaying (Member)**: Wrote the debuff function; introduced the buff and debuff function in the video.
 - **Yang Ruofan (Member)**: Wrote the fight function; introduced the fight function in the video.
