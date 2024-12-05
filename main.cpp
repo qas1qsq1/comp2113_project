@@ -89,7 +89,7 @@ int main(){
                     cin >> choice;
 
                     if (choice == 'Y' || choice == 'y') {
-                        Fight(all_players[i]);
+                        Fight(all_players[I], randomEvent);
                     } else {
                         cout << "You chose not to fight. Exiting..." << std::endl;
                     }
