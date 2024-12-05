@@ -23,7 +23,7 @@ int main(){
     // Determine the starting stats of each player
     // Select input from an external file here
 
-    cout << "Reading default parameters from file 'config.txt'..." << endl;
+    cout << "Reading default parameters from file 'property.txt'..." << endl;
 
     int attack_default, life_default, max_life_default;
     ifstream config_file("property.txt");
