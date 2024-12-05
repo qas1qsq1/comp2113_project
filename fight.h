@@ -6,6 +6,6 @@
 #include <cstdlib>
 #include <ctime>
 
-void Fight(Player &player1);
+void Fight(Player &player1, RandomEvent &randomEvent);
 
 #endif
