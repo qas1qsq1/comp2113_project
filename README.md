@@ -17,7 +17,7 @@ Players’ information is stored in a dynamic array. For each player, a for loop
 
 - **Buff and Debuff**: Developed functions for applying buffs and debuffs that affect player attributes. Buffs can increase attack, life points, or max life points, while debuffs decrease them. Notably, there is a special debuff where max life is reduced, but a 10% increase in life is given. These functions include checks to ensure that life does not exceed maximum limits.
 
-- **Fight System**: Implemented a combat system where players can choose to fight monsters. The fight mechanics calculate damage based on player and monster stats, adding excitement and risk to the game.
+- **Fight System**: Implemented a combat system where players can choose to fight monsters. The fight mechanics calculate damage based on player and monster stats, and reward players with scores based on their performance, adding excitement and risk to the game.
 
 - **Winner Calculation**: After all players complete their journeys, the program calculates the final scores and identifies the winner. If multiple players share the highest score, a "Draw" is declared. However, if all players die, the program will end in advance. This feature provides closure and a competitive element to the game.
 ## 4.  Library Used
