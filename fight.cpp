@@ -31,7 +31,7 @@ void Fight(Player &player) {
         BossLife -= player.PlayerAttack;
 
         if (BossLife <= 0) {
-            player.score += BossLife + BossAttack;
+            player.score += -BossLife + BossAttack;
             std::cout << "Player wins!" << std::endl;
             std::cout << "PlayerLife: " << player.PlayerLife << std::endl;
             std::cout << "PlayerAttack: " << player.PlayerAttack << std::endl;
