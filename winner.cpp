@@ -12,7 +12,7 @@ void findTopPlayer(Player* all_players, int player_num) {
     for (int i = 1; i < 1+player_num; i++) {
         if (!all_players[i].failed) {
             allFailed = false;  // At least one player was found not to have failed
-            all_players[i].score = all_players[i].PlayerAttack + all_players[i].PlayerLife + all_players[i].PlayerMaxLife; // 计算该玩家的得分
+            all_players[i].score = all_players[i].score + all_players[i].PlayerAttack + all_players[i].PlayerLife + all_players[i].PlayerMaxLife; // 计算该玩家的得分
             
             if (all_players[i].score > topScore) {
                 topScore = all_players[i].score;
