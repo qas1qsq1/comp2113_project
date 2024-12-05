@@ -95,8 +95,8 @@ void debuff(Player &player, RandomEvent &randomEvent) {
 
     applyDebuff(player, choice, randomEvent);
 
-    std::cout << "Your health is: " << player.PlayerLife << std::endl;
-    std::cout << "Your max health is: " << player.PlayerMaxLife << std::endl;
+    std::cout << "Your life point is: " << player.PlayerLife << std::endl;
+    std::cout << "Your max life point is: " << player.PlayerMaxLife << std::endl;
     std::cout << "Your attack is: " << player.PlayerAttack << std::endl;
 }
 
